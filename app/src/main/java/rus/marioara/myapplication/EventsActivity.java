@@ -56,7 +56,6 @@ public class EventsActivity extends Activity {
         });
     }
 
-
     private class EventsAdapter extends RecyclerView.Adapter<EventItem> {
         private List<EventInfo> eventsList;
 
