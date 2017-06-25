@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1082885440941",
+    "firebase_url": "https://myappplai.firebaseio.com",
+    "project_id": "myappplai",
+    "storage_bucket": "myappplai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082885440941:android:1945695c5f79ac4a",
+        "android_client_info": {
+          "package_name": "rus.marioara.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082885440941-r9dc13oslmvnmvgbl3augvl99jojuh9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "rus.marioara.myapplication",
+            "certificate_hash": "dd663ab1b91c1d8181113a72f60f5935b988a9a5"
+          }
+        },
+        {
+          "client_id": "1082885440941-el7v2ttv8bm5mk63aaldv821mfga244b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHW8bdGKCUAP7kBm_Vj3m75mf1p9jsTkQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1082885440941-el7v2ttv8bm5mk63aaldv821mfga244b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
