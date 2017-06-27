@@ -1,25 +1,21 @@
 package rus.marioara.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * Created by Bogdan Roatis on 6/25/2017.
- */
 
 public class EventsActivity extends Activity {
 
@@ -56,7 +52,7 @@ public class EventsActivity extends Activity {
         });
     }
 
-    private class EventsAdapter extends RecyclerView.Adapter<EventItem> {
+    private class EventsAdapter extends RecyclerView.Adapter<EventItem> implements EventItem.OnElementClick {
         private List<EventInfo> eventsList;
 
         public EventsAdapter(List<EventInfo> eventsList) {
@@ -79,11 +75,22 @@ public class EventsActivity extends Activity {
             holder.setTitle(eventInfo.getTitle());
             holder.setHour(eventInfo.getHour());
             holder.setRoom(eventInfo.getRoom());
+            holder.setOnClickEvent(this);
         }
 
         @Override
         public int getItemCount() {
             return eventsList.size();
+        }
+
+        @Override
+        public void onEventClick(View view, int position) {
+            EventInfo eventInfo = eventsList.get(position);
+            Intent intent = new Intent(EventsActivity.this, EventDetailsActivity.class);
+            intent.putExtra("TItle", eventInfo.getTitle());
+            intent.putExtra("Hour", eventInfo.getHour());
+            intent.putExtra("Room", eventInfo.getRoom());
+            startActivity(intent);
         }
     }
 }
