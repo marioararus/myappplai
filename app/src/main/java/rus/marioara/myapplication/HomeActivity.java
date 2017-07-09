@@ -22,8 +22,8 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ivAmb = (ImageView) findViewById(R.id.iv_amb);
-        ivAmb.setImageDrawable(getResources().getDrawable(R.drawable.amb));
+        ivAmb = (ImageView) findViewById(R.id.iv_aas);
+        ivAmb.setImageDrawable(getResources().getDrawable(R.drawable.aas));
         btnEvents = (Button) findViewById(R.id.btn_events);
         btnEvents.setOnClickListener(new View.OnClickListener() {
             @Override
